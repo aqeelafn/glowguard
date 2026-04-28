@@ -4,7 +4,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Framework-red.svg)
 ![Data_Science](https://img.shields.io/badge/Expert_System-Data_Architecture-green.svg)
 
-**Live Demo:** [KLIK DI SINI UNTUK MENCOBA APLIKASI] *(Isi dengan link Streamlit Share-mu nanti)*
+**Live Demo:** [KLIK DI SINI UNTUK MENCOBA APLIKASI] 
 
 ## 📖 Ringkasan Eksekutif
 Banyak konsumen mengalami iritasi kulit (*chemical burns*, kerusakan *skin barrier*) akibat ketidaktahuan dalam menggabungkan bahan aktif *skincare*. **GlowGuard** adalah sebuah purwarupa *Expert System* (Sistem Pakar) berbasis data yang menstrukturkan aturan dermatologis ke dalam bentuk *Feature Matrix* untuk menganalisis risiko interaksi kimia secara instan.
@@ -30,4 +30,4 @@ Aplikasi ini menjalankan *Rule-Engine Logic* dengan kompleksitas waktu `O(1)` be
 
 1. Clone repository:
    ```bash
-   git clone [https://github.com/username-kamu/glowguard-advanced.git](https://github.com/username-kamu/glowguard-advanced.git)
+   git clone [https://github.com/aqeelafn/glowguard-advanced.git](https://github.com/aqeelafn/glowguard-advanced.git)
