@@ -1,0 +1,38 @@
+bahan_1,bahan_2,kategori_1,kategori_2,strength_1,strength_2,ph_1,ph_2,status,label_status,interaction_type,irritation_risk,explanation
+retinol,aha_bha,retinoid,exfoliant,strong,strong,neutral,low,JANGAN,0,over_exfoliation,high,Combination too harsh and damages skin barrier
+retinol,vitamin_c,retinoid,antioxidant,strong,strong,neutral,low,JANGAN,0,ph_conflict,high,Different pH levels increase irritation risk
+retinol,niacinamide,retinoid,barrier,medium,medium,neutral,neutral,AMAN,2,barrier_support,low,Reduces irritation and supports skin barrier
+retinol,hyaluronic_acid,retinoid,hydrator,strong,low,neutral,neutral,AMAN,2,hydration_support,low,Prevents dryness from retinol
+retinol,benzoyl_peroxide,retinoid,acne,strong,strong,neutral,neutral,JANGAN,0,deactivation,high,Benzoyl peroxide deactivates retinol
+retinol,sunscreen,retinoid,protection,strong,low,neutral,neutral,WAJIB,3,mandatory,high,Required UV protection
+retinol,ceramide,retinoid,barrier,strong,low,neutral,neutral,AMAN,2,barrier_repair,low,Repairs skin barrier
+retinol,centella,retinoid,soothing,strong,low,neutral,neutral,AMAN,2,soothing_support,low,Reduces irritation
+retinol,peptide,retinoid,peptide,strong,low,neutral,neutral,AMAN,2,anti_aging,low,Complementary anti-aging effects
+vitamin_c,aha_bha,antioxidant,exfoliant,strong,strong,low,low,JANGAN,0,over_exfoliation,high,High irritation risk
+vitamin_c,niacinamide,antioxidant,barrier,medium,medium,low,neutral,AMAN,2,stable_combo,low,Safe in modern formulations
+vitamin_c,vitamin_e,antioxidant,antioxidant,medium,medium,low,neutral,AMAN,2,synergy,low,Boosts antioxidant protection
+vitamin_c,sunscreen,antioxidant,protection,medium,low,low,neutral,AMAN,2,uv_boost,low,Enhances UV protection
+vitamin_c,hyaluronic_acid,antioxidant,hydrator,medium,low,low,neutral,AMAN,2,hydration_support,low,Hydrates skin
+vitamin_c,ferulic_acid,antioxidant,antioxidant,medium,medium,low,neutral,AMAN,2,stabilization,low,Improves stability
+vitamin_c,peptide,antioxidant,peptide,strong,low,low,neutral,HATI_HATI,1,ph_conflict,medium,Low pH may affect peptide
+aha_bha,hyaluronic_acid,exfoliant,hydrator,strong,low,low,neutral,AMAN,2,hydration_support,low,Hydrates after exfoliation
+aha_bha,niacinamide,exfoliant,barrier,strong,medium,low,neutral,HATI_HATI,1,irritation,medium,May irritate sensitive skin
+aha_bha,ceramide,exfoliant,barrier,strong,low,low,neutral,AMAN,2,barrier_repair,low,Restores barrier
+aha_bha,centella,exfoliant,soothing,strong,low,low,neutral,AMAN,2,soothing_support,low,Calms skin
+aha_bha,sunscreen,exfoliant,protection,strong,low,low,neutral,WAJIB,3,mandatory,high,Prevents hyperpigmentation
+salicylic_acid,niacinamide,exfoliant,barrier,medium,medium,low,neutral,AMAN,2,acne_support,low,Good for acne
+salicylic_acid,retinol,exfoliant,retinoid,strong,strong,low,neutral,JANGAN,0,over_exfoliation,high,Too harsh combination
+salicylic_acid,benzoyl_peroxide,exfoliant,acne,strong,strong,low,neutral,HATI_HATI,1,drying,high,Very drying
+salicylic_acid,hyaluronic_acid,exfoliant,hydrator,medium,low,low,neutral,AMAN,2,hydration_support,low,Prevents dryness
+benzoyl_peroxide,niacinamide,acne,barrier,strong,medium,neutral,neutral,AMAN,2,anti_inflammation,low,Reduces inflammation
+benzoyl_peroxide,hyaluronic_acid,acne,hydrator,strong,low,neutral,neutral,AMAN,2,hydration_support,low,Reduces dryness
+benzoyl_peroxide,ceramide,acne,barrier,strong,low,neutral,neutral,AMAN,2,barrier_repair,low,Repairs barrier
+niacinamide,hyaluronic_acid,barrier,hydrator,low,low,neutral,neutral,AMAN,2,support,low,Safe daily use
+niacinamide,ceramide,barrier,barrier,medium,low,neutral,neutral,AMAN,2,barrier_boost,low,Strengthens barrier
+niacinamide,centella,barrier,soothing,medium,low,neutral,neutral,AMAN,2,calming,low,Reduces redness
+niacinamide,zinc,barrier,acne,medium,medium,neutral,neutral,AMAN,2,oil_control,low,Controls sebum
+hyaluronic_acid,ceramide,hydrator,barrier,low,low,neutral,neutral,AMAN,2,barrier_lock,low,Locks moisture
+hyaluronic_acid,panthenol,hydrator,soothing,low,low,neutral,neutral,AMAN,2,hydration,low,Deep hydration
+peptide,hyaluronic_acid,peptide,hydrator,low,low,neutral,neutral,AMAN,2,anti_aging_support,low,Supports hydration
+peptide,ceramide,peptide,barrier,low,low,neutral,neutral,AMAN,2,repair_support,low,Supports barrier repair
+sunscreen,all_active,protection,universal,low,variable,neutral,variable,WAJIB,3,mandatory,high,Essential final step
