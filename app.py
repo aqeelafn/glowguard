@@ -8,8 +8,13 @@ st.set_page_config(page_title="GlowGuard: Advanced SkinChem Analyzer", page_icon
 @st.cache_data
 def load_data():
     df = pd.read_csv("skincare_rules.csv")
-    # Membersihkan format teks (menghilangkan underscore dan kapitalisasi huruf pertama)
-    df = df.applymap(lambda x: str(x).replace('_', ' ').title() if isinstance(x, str) else x)
+    
+    # 1. Rapikan nama KOLOM (bahan_1 menjadi Bahan 1, ph_1 menjadi Ph 1, dst)
+    df.columns = df.columns.str.replace('_', ' ').str.title()
+    
+    # 2. Rapikan ISI DATA-nya
+    df = df.apply(lambda x: x.map(lambda y: str(y).replace('_', ' ').title() if isinstance(y, str) else y))
+    
     return df
 
 df = load_data()
