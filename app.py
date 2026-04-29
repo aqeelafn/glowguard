@@ -175,7 +175,7 @@ with st.sidebar:
     ], label_visibility="collapsed")
 
     st.markdown("---")
-    st.caption("Data by Aqeela · Powered by Claude AI")
+    st.caption("Data by Aqeela")
     st.caption("Expert System + Claude Vision")
 
 # ============================================================
