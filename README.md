@@ -1,33 +1,125 @@
-# 🧪 GlowGuard: Advanced Skincare Chemical Interaction Analyzer
+# 🧪 GlowGuard Pro — Advanced Skincare Intelligence System
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-Framework-red.svg)
-![Data_Science](https://img.shields.io/badge/Expert_System-Data_Architecture-green.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.32-red.svg)
+![Claude AI](https://img.shields.io/badge/Powered_by-Claude_AI-orange.svg)
+![Plotly](https://img.shields.io/badge/Charts-Plotly-purple.svg)
 
-**Live Demo:** [KLIK DI SINI UNTUK MENCOBA APLIKASI] 
+**Live Demo:** [Deploy via Streamlit Community Cloud]
 
-## 📖 Ringkasan Eksekutif
-Banyak konsumen mengalami iritasi kulit (*chemical burns*, kerusakan *skin barrier*) akibat ketidaktahuan dalam menggabungkan bahan aktif *skincare*. **GlowGuard** adalah sebuah purwarupa *Expert System* (Sistem Pakar) berbasis data yang menstrukturkan aturan dermatologis ke dalam bentuk *Feature Matrix* untuk menganalisis risiko interaksi kimia secara instan.
+---
 
-## 🧠 Metodologi Data & Pendekatan Machine Learning
-Proyek ini mengadopsi kerangka kerja **Knowledge-Based Expert System**. Dataset dibangun dengan prinsip *Feature Engineering* yang mengekstraksi variabel independen pembentuk risiko iritasi.
+## 📖 Overview
 
-Variabel (*Features*) yang dianalisis dalam sistem ini meliputi:
-1. **Ordinal Features:** * `Strength` (Tingkat konsentrasi/kekuatan: *Low, Medium, Strong*)
-   * `pH Levels` (Kadar asam basa: *Low, Neutral, Variable*)
-2. **Categorical Features:** * `Kategori/Role` (Fungsi bahan: *Retinoid, Exfoliant, Barrier, Antioxidant*, dll)
-   * `Interaction Type` (Bentuk reaksi: *Over Exfoliation, pH Conflict, Barrier Repair*, dll)
-3. **Target Variable / Labels:**
-   * `Label_Status` & `Irritation_Risk` (Di- *mapping* dari 0 [JANGAN] hingga 3 [WAJIB]).
+GlowGuard Pro is a full-featured dermatology-grade skincare intelligence system built on a **Knowledge-Based Expert System** architecture, enhanced with **Claude AI Vision** for real-time skin analysis.
 
-**Mengapa ini penting dalam Data Science?**
-Dataset multidimensi ini (memiliki fitur pendukung `ph`, `strength`, dll) bertindak sebagai *Ground Truth*. Strukturnya sudah disiapkan (*Pre-processed*) sehingga di masa depan dapat langsung digunakan untuk melatih model **Classification Machine Learning** (seperti *Decision Trees* atau *Random Forest Classifier*) untuk memprediksi probabilitas iritasi pada formulasi *skincare* yang belum pernah ada di pasaran.
+This is not just a compatibility checker — it's a complete skincare companion with 6 major modules.
 
-## ⚙️ Arsitektur Sistem (Streamlit)
-Aplikasi ini menjalankan *Rule-Engine Logic* dengan kompleksitas waktu `O(1)` berkat metode *Bi-directional Lookup*. Sistem tidak hanya memberikan hasil *binary* (Aman/Tidak), tetapi mengembalikan metrik analitik seperti jenis benturan (*pH Conflict / Deactivation*) berdasarkan *Feature Matrix* yang dibangun.
+---
 
-## 🛠️ Instalasi Lokal
+## 🧩 Features
 
-1. Clone repository:
-   ```bash
-   git clone [https://github.com/aqeelafn/glowguard-advanced.git](https://github.com/aqeelafn/glowguard-advanced.git)
+### 1. 👤 Skin Profile Quiz
+- Captures skin type, age, climate, concerns, current actives, sensitivity level, and budget
+- Generates a **radar chart** of your skin dimensions (hydration, barrier health, sebum, sensitivity, active tolerance)
+- Stores your profile in session state for personalized results across all pages
+
+### 2. 🧪 Chemical Interaction Analyzer
+- **Bi-directional lookup** with All Active support (e.g. Sunscreen + any active)
+- Rich status labels: AMAN / HATI-HATI / JANGAN / WAJIB
+- **Plotly bar chart** showing irritation risk, barrier damage risk, pH clash, and efficacy loss
+- Full ingredient profile breakdown (pH, strength, category)
+- **Interactive heatmap** — visual matrix of all mapped ingredient combinations
+- Safe alternative suggestions when a dangerous combination is detected
+
+### 3. 🔄 Skin Cycling Planner
+- Generates a personalized **4-night or 6-night skin cycling schedule**
+- Adapts retinol strength to experience level (Beginner/Intermediate/Advanced)
+- Includes AM routine with step-by-step layering order
+- **Progress prediction chart** — expected skin health improvement over 4 weeks
+- Colored day cards with specific product recommendations per night
+
+### 4. 💡 Product Recommendations
+- Curated database of effective, accessible skincare products with IDR pricing
+- Filterable by skin concern and budget
+- Each product shows: brand, ingredients list, pH, rating, and personalized "why this works for you" explanation
+
+### 5. 📸 AI Face Scan — Claude Vision
+- Upload a selfie → Claude analyzes your visible skin conditions
+- Returns: skin type assessment, visible concerns, barrier health, recommended actives, AM/PM starter routine, and ingredients to avoid
+- Powered by `claude-opus-4-5` with vision capability
+- User provides their own Anthropic API key (privacy-first design)
+
+### 6. 📊 My Dashboard
+- Real-time conflict checker across all your current actives
+- Visual concern priority chart
+- Summary metrics from your skin profile
+
+---
+
+## 🧠 Technical Architecture
+
+```
+Knowledge Layer        →  skincare_rules.csv  (35+ ingredient interaction rules)
+Application Layer      →  app.py              (Streamlit multi-page app)
+Visualization Layer    →  Plotly              (charts, heatmaps, radar, bar)
+AI Layer               →  Anthropic Claude    (Vision API for face scan + text advice)
+```
+
+**Feature engineering in the dataset:**
+- `Ordinal features`: Strength (Low/Medium/Strong), pH (Low/Neutral/Variable)
+- `Categorical features`: Kategori (Retinoid/Exfoliant/Barrier/Antioxidant), Interaction Type
+- `Target variables`: Status (AMAN/HATI-HATI/JANGAN/WAJIB), Irritation Risk (Low/Medium/High)
+
+This dataset can be used to train a **classification ML model** (Decision Tree, Random Forest, XGBoost) to predict irritation probability for novel combinations not yet in the database.
+
+---
+
+## 🛠️ Local Setup
+
+```bash
+git clone https://github.com/yourusername/glowguard-pro.git
+cd glowguard-pro
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+For the AI Face Scan feature, you'll need an [Anthropic API key](https://console.anthropic.com).
+
+---
+
+## 🚀 Deploy to Streamlit Community Cloud
+
+1. Push to GitHub
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. Connect your repo → select `app.py` as main file
+4. The Face Scan API key is entered by users at runtime — no secrets needed in deployment
+
+---
+
+## 📁 File Structure
+
+```
+glowguard-pro/
+├── app.py                  # Main Streamlit application (all 6 pages)
+├── skincare_rules.csv      # Knowledge base (ingredient interaction rules)
+├── requirements.txt        # Python dependencies
+└── README.md               # This file
+```
+
+---
+
+## 🔮 Roadmap
+
+- [ ] Expand skincare_rules.csv to 100+ ingredient combinations
+- [ ] Add ML-powered irritation probability prediction (Random Forest)
+- [ ] Product database via external API (Open Beauty Facts / Skincare API)
+- [ ] Multi-language support (Bahasa Indonesia + English toggle)
+- [ ] Export routine to PDF / share as link
+- [ ] Ingredient label scanner (upload product label → extract actives)
+
+---
+
+## 👩‍💻 Author
+
+Built by Aqeela · Data Architecture + Expert System Design  
